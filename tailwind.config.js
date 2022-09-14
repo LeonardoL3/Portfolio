@@ -13,6 +13,9 @@ module.exports = {
         'neutral-500': '#8890b0',
         'dark': '#0a192f',
       },
+      gridTemplateColumns: {
+        'projects': 'repeat(auto-fit, minmax(250px, 1fr))'
+      },
     },
   },
   plugins: [],
