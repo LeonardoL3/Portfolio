@@ -40,8 +40,8 @@ const Home: NextPage = () => {
           <div className="grid grid-cols-projects auto-rows-fr gap-3">
             {githubProjects.map((project) => {
               return (
-                <div className="bg-blue-400 text-center">
-                  <a href={project.repositoryUrl} key={project.title}>
+                <div key={project.title} className="bg-blue-400 text-center">
+                  <a href={project.repositoryUrl}>
                     <header>
                       <img src={project.cover} className="h-60 w-full object-cover" />
                     </header>
