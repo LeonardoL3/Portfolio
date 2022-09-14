@@ -1,9 +1,6 @@
-import React from 'react';
-import type { GetServerSideProps, NextPage } from 'next';
-import Header from '../components/Header';
-import Image from 'next/image';
-import { ScrollButton } from '../components/ScrollButton';
-import { GithubProjects } from '../components/GithubProjects'
+import React from 'react'
+import type { NextPage } from 'next'
+import Image from 'next/image'
 import { githubProjects } from '../mock/github-projects'
 
 import { LinkedinLogo, GithubLogo, WhatsappLogo, Envelope } from 'phosphor-react'
@@ -14,7 +11,6 @@ const Home: NextPage = () => {
 
   return (
     <main>
-
       <section id="home">
         <div className="flex h-screen items-center justify-center flex-col">
 
@@ -46,7 +42,7 @@ const Home: NextPage = () => {
                       <img src={project.cover} className="h-60 w-full object-cover" />
                     </header>
                     <main className="flex flex-col gap-4 justify-between h-[calc(100%-240px)]">
-                      <h2 className="text-xl pt-3"> {project.title} </h2>
+                      <h2 className="text-xl pt-3 "> {project.title} </h2>
                       <p>
                         {project.description.pt}
                       </p>
