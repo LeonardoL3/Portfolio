@@ -26,7 +26,7 @@ export const githubProjects: IGithubProjects[] = [
 		title: 'Next.js Charts Application',
 		description: {
 			en: '',
-			pt: 'dashboard em Next usando apexcharts para construção dos graficos',
+			pt: 'dashboard em Next usando apexcharts para construção de graficos',
 			es: '',
 		},
 		repositoryUrl: 'https://github.com/LeonardoL3/Next.js-charts',

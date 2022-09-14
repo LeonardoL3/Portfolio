@@ -34,14 +34,14 @@ const Home: NextPage = () => {
 					<div className="grid grid-cols-projects auto-rows-fr gap-3">
 						{githubProjects.map((project) => {
 							return (
-								<div key={project.title} className="bg-blue-400 text-center">
+								<div key={project.title} className="bg-transparent text-center">
 									<a href={project.repositoryUrl}>
 										<header>
-											<img src={project.cover} className="h-60 w-full object-cover" />
+											<img src={project.cover} className="h-60 w-full object-cover rounded-t-md" />
 										</header>
-										<main className="flex flex-col gap-4 justify-between h-[calc(100%-240px)]">
+										<main className="flex flex-col gap-4 justify-between h-[calc(100%-240px)] border-x-[1px] border-b-[1px]">
 											<h2 className="text-xl pt-3 "> {project.title} </h2>
-											<p>
+											<p className="px-3">
 												{project.description.pt}
 											</p>
 											<span className="pb-3">
