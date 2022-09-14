@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Component {...pageProps} />
-      <ScrollButton />
+      {/*<ScrollButton />*/}
     </div>
   )
 }

@@ -82,7 +82,7 @@ const Home: NextPage = ({ data }: any) => {
 export default Home;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await fetch('https://api.github.com/users/Leonardo334/repos')
+  const response = await fetch('https://api.github.com/users/LeonardoL3/repos')
   const data = await response.json()
 
   return {
