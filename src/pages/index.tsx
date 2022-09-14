@@ -8,19 +8,6 @@ import { githubProjects } from '../mock/github-projects'
 
 import { LinkedinLogo, GithubLogo, WhatsappLogo, Envelope } from 'phosphor-react'
 
-
-interface IProjects {
-  name: string
-  description: {
-    pt: string,
-    es: string,
-    en: string
-  }
-  tags: string[],
-  repositoryUrl: string,
-  cover: string
-}
-
 const Home: NextPage = () => {
 
   const teste = '10'
@@ -47,23 +34,28 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section id="projects">
-        <div className="max-w-[1189px] mx-auto mb-24 px-6">
+      <section id="projects" className="mb-24">
+        <div className="max-w-[1189px] mx-auto px-6">
           <h2 className="text-xl md:text-3xl py-12 text-neutral-500"> Some of my projects on Github: </h2>
           <div className="grid grid-cols-projects auto-rows-fr gap-3">
-            {githubProjects.map((project: any) => {
+            {githubProjects.map((project) => {
               return (
-                <a href={project.repositoryUrl} key={project.name} className="bg-orange-400 text-center">
-                  <div>
-                    <img src={project.cover} className="h-60 w-full object-cover" />
-                  </div>
-                  <div>
-                    <h2> {project.name} </h2>
-                    <p>
-                      {project.description.pt}
-                    </p>
-                  </div>
-                </a>
+                <div className="bg-blue-400 text-center">
+                  <a href={project.repositoryUrl} key={project.title}>
+                    <header>
+                      <img src={project.cover} className="h-60 w-full object-cover" />
+                    </header>
+                    <main className="flex flex-col gap-4 justify-between h-[calc(100%-240px)]">
+                      <h2 className="text-xl pt-3"> {project.title} </h2>
+                      <p>
+                        {project.description.pt}
+                      </p>
+                      <span className="pb-3">
+                        {project.tags.join('-')}
+                      </span>
+                    </main>
+                  </a>
+                </div>
               )
             })}
           </div>

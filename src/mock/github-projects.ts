@@ -1,6 +1,18 @@
-export const githubProjects = [
+interface IGithubProjects {
+  title: string
+  description: {
+    pt: string,
+    es: string,
+    en: string
+  }
+  tags: string[],
+  repositoryUrl: string,
+  cover: string
+}
+
+export const githubProjects: IGithubProjects[] = [
   {
-    name: "Node soccer api",
+    title: "Node soccer api",
     description: {
       en: "",
       pt: "Aplicação node para organizar e marcar encontros de jogos de futebol, feita seguindo protocolo TDD e clean architecture",
@@ -11,7 +23,7 @@ export const githubProjects = [
     cover: "/assets/soccer-node-api.jpg",
   },
   {
-    name: "Next.js Charts Application",
+    title: "Next.js Charts Application",
     description: {
       en: "",
       pt: "dashboard em Next usando apexcharts para construção dos graficos",
@@ -22,7 +34,7 @@ export const githubProjects = [
     cover: "/assets/charts.png",
   },
   {
-    name: "Portifolio pessoal",
+    title: "Portifolio pessoal",
     description: {
       en: "",
       pt: "Código do meu portifolio pessoal",
@@ -31,6 +43,6 @@ export const githubProjects = [
     repositoryUrl: "https://github.com/LeonardoL3/Next.js-charts",
     tags: ['Next', 'Typescript', 'tailwind'],
     cover: "/assets/te.jpg",
-  }
-]
-
+  },
+  
+] 
