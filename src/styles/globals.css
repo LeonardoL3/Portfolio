@@ -10,6 +10,9 @@ html {
 body {
   font-family: sans-serif;
   background: linear-gradient(#0a192f, #2c3d57);
-  color: white
+  color: white;
 }
 
+.dark-transition {
+  @apply transition-colors duration-300
+}

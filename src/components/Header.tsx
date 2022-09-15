@@ -1,21 +1,23 @@
-import Link from 'next/Link'
+import React from 'react'
+import { Sun, Moon } from 'phosphor-react'
+import { useTheme } from 'next-themes'
 
 const Header = () => {
-  return (
-    <header className="text-gray-400 sticky top-0">
-      <ul className="flex gap-10 p-10">
-        <li>
-          <Link href="#home"> Home </Link>
-        </li>
-        <li>
-          <Link href="#projects"> My Projects </Link>
-        </li>
-        <li>
-          <Link href="#contact"> Contact </Link>
-        </li>
-      </ul>
-    </header>
-  )
+
+	const { setTheme } = useTheme()
+
+	return (
+		<header className="sticky top-0 right-0 h-24 px-12">
+			<div className="flex items-center justify-end h-full gap-4">
+				<button type="button" onClick={() => setTheme('light')}>
+					<Sun size={24} color="white"  />
+				</button>
+				<button type="button" onClick={() => setTheme('dark')}>
+					<Moon size={24} color="white" />
+				</button>
+			</div>
+		</header> 
+	)
 }
 
 

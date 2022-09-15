@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import { githubProjects } from '../mock/github-projects'
 
 import { LinkedinLogo, GithubLogo, WhatsappLogo, Envelope } from 'phosphor-react'
+import { useTheme } from 'next-themes'
+
 
 const Home: NextPage = () => {
+	const { setTheme, resolvedTheme } = useTheme()
 
 	return (
 		<main>
@@ -23,11 +26,12 @@ const Home: NextPage = () => {
 					</div>
 					<div className="text-center mx-8">
 						<h1 className="text-neutral-500 text-5xl py-8"> Leonardo Lazzaretti </h1>
-						<p className="text-neutral-300"> I&apos;m a fullstack developer currently working with React and Node. </p>
+						<p className="text-neutral-300 dark:text-red-600 dark-transition"> I&apos;m a fullstack web developer currently working with React and Node. </p>
 					</div>
 				</div>
+				
 			</section>
-
+ 
 			<section id="projects" className="mb-24">
 				<div className="max-w-[1189px] mx-auto px-6">
 					<h2 className="text-xl md:text-3xl py-12 text-neutral-500"> Some of my projects on Github: </h2>
