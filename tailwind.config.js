@@ -16,7 +16,7 @@ module.exports = {
 				'dark': '#0a192f',
 			},
 			gridTemplateColumns: {
-				'projects': 'repeat(auto-fit, minmax(280px, 1fr))',
+				'projects': 'repeat(auto-fit, minmax(387px, 1fr))',
 			},
 		},
 	}, 
