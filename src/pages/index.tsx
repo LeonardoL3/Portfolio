@@ -34,12 +34,12 @@ const Home: NextPage = () => {
 					<div className="grid grid-cols-projects auto-rows-fr gap-3">
 						{githubProjects.map((project) => {
 							return (
-								<a href={project.repositoryUrl} key={project.title} className="min-h-[452px] bg-transparent border-[1px] border-solid border-neutral-500 rounded-lg overflow-hidden">
+								<a href={project.repositoryUrl} key={project.title} className="group min-h-[452px] bg-transparent border-[1px] border-solid border-neutral-500 rounded-lg overflow-hidden">
 									<header>
 										<img src={project.cover} className="h-60 w-full object-cover" />
 									</header>
 									{/* h-[calc(100%-240px)] */}
-									<section className="h-[calc(100%-240px)] flex flex-col justify-between gap-y-4 mx-4">
+									<section className="group-hover:brightness-50 h-[calc(100%-240px)] flex flex-col justify-between gap-y-4 mx-4">
 										<div className="pt-4">
 											<h2 className="text-[18px] mb-4 font-bold"> {project.title} </h2>
 											<p className="text-sm">
@@ -60,9 +60,9 @@ const Home: NextPage = () => {
 			<footer>
 				<div className="flex justify-center h-24 items-center gap-12">
 					<LinkedinLogo alt="Linkedin" size={24} className="hover:text-orange-400" />
-					<GithubLogo size={24} className="hover:text-orange-400" />
-					<Envelope size={24} className="hover:text-orange-400" />
-					<WhatsappLogo size={24} className="hover:text-orange-400" />
+					<GithubLogo alt="Github" size={24} className="hover:text-orange-400" />
+					<Envelope alt="Gmail" size={24} className="hover:text-orange-400" />
+					<WhatsappLogo alt="WhatsApp" size={24} className="hover:text-orange-400" />
 				</div>
 			</footer>
 

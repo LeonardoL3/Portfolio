@@ -13,7 +13,7 @@ module.exports = {
 				'secondary': '#3c9484',
 				'neutral-300': '#ccd7f7',
 				'neutral-500': '#8890b0',
-				'dark': '#0a192f',
+				'estranho': '#0a192f',
 			},
 			gridTemplateColumns: {
 				'projects': 'repeat(auto-fit, minmax(387px, 1fr))',
