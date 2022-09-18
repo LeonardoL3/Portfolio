@@ -16,7 +16,7 @@ module.exports = {
 				'estranho': '#0a192f',
 			},
 			gridTemplateColumns: {
-				'projects': 'repeat(auto-fit, minmax(387px, 1fr))',
+				'projects': 'repeat(auto-fit, minmax(290px, 1fr))',
 			},
 		},
 	}, 
