@@ -15,6 +15,7 @@ const Header = () => {
 	console.log('aspAth', asPath)
 
 	const switchThemes = (event: any) => {
+		console.log(event)
 		setTheme(event.target.name)
 	}
 

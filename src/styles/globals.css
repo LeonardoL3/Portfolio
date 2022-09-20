@@ -27,3 +27,7 @@ body {
 .name-typewriter-animation {
   @apply after:absolute after:inset-0 after:bg-white after:w-1 after:h-[85%] after:animate-blink before:absolute before:inset-0 before:bg-estranho before:animate-typewriter
 }
+
+svg {
+  pointer-events: none;
+}
