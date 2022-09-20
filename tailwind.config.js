@@ -18,6 +18,19 @@ module.exports = {
 			gridTemplateColumns: {
 				'projects': 'repeat(auto-fit, minmax(290px, 1fr))',
 			},
+			animation: {
+				typewriter: 'typewriter 6s steps(20) 1s infinite alternate',
+				blink: 'blink 300ms steps(2, start) infinite alternate, typewriter 6s steps(20) 1s infinite alternate'
+			},
+			keyframes: {
+				typewriter: {
+					'0%, 10%': { left: '0' },
+					'80%, 100%': { left: '100%' }
+				},
+				blink: {
+					'100%': { visibility: 'hidden' }
+				}
+			},
 		},
 	}, 
 	plugins: [],

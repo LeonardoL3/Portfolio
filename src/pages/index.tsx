@@ -15,20 +15,23 @@ const Home: NextPage = () => {
 	return (
 		<main>
 			<section id="home">
-				<div className="flex h-screen items-center justify-center flex-col">
+				<div className="flex h-screen items-center justify-evenly flex-row-reverse">
 
-					<div className="rounded-full overflow-hidden border-2 border-solid border-neutral-300 w-[222px] h-[222px]">
+					<div className="rounded-full overflow-hidden border text-[0]">
 						<Image
 							src={'https://github.com/Leonardo334.png'}
-							width="222px"
-							height="222px"
-							className="rounded-full border-2 border-solid border-stone-500"
+							width="422px"
+							height="422px"
+							className="rounded-full"
 							quality={100}
 						/>
 					</div>
-					<div className="text-center mx-8">
-						<h1 className="text-neutral-500 text-5xl py-8"> Leonardo Lazzaretti </h1>
-						<p className="text-neutral-300"> {t?.description} </p>
+					<div className="mx-8">
+						<span className="text-3xl block py-4"> Hi there! My name is </span>
+						<h1 className="relative text-neutral-500 text-7xl py-2 font-[monospace] name-typewriter-animation">
+							Leonardo Lazzaretti.
+						</h1> 
+						<p className="text-neutral-300 py-4"> {t?.description} </p>
 					</div>
 				</div>
 				
