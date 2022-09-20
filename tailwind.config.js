@@ -20,12 +20,35 @@ module.exports = {
 			},
 			animation: {
 				typewriter: 'typewriter 6s steps(20) 1s infinite alternate',
-				blink: 'blink 300ms steps(2, start) infinite alternate, typewriter 6s steps(20) 1s infinite alternate'
+				typewriter_and_blink: 'typewriter steps(20) 6s 1s infinite alternate, blink 300ms steps(2, start) infinite alternate'
 			},
 			keyframes: {
 				typewriter: {
 					'0%, 10%': { left: '0' },
 					'80%, 100%': { left: '100%' }
+				},
+				typewriterTeste: {
+					'0%': {left: '0'}, 
+					'5%': { left: '5%' },
+					'10%': { left: '10%' },
+					'15%': { left: '15%' },
+					'20%': { left: '20%' },
+					'25%': { left: '25%' },
+					'30%': { left: '30%' },
+					'35%': { left: '35%' },
+					'40%': { left: '40%' },
+					'45%': { left: '45%' },
+					'50%': { left: '50%' },
+					'55%': { left: '55%' },
+					'60%': { left: '60%' },
+					'65%': { left: '65%' },
+					'70%': { left: '70%' },
+					'75%': { left: '75%' },
+					'80%': { left: '80%' },
+					'85%': { left: '85%' },
+					'90%': {left: '90%'},
+					'95%': {left: '95%'},
+					'100%': { left: '100%' },
 				},
 				blink: {
 					'100%': { visibility: 'hidden' }

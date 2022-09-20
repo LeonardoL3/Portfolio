@@ -13,9 +13,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif; /* monospace/fantasy talvez */
-  background: #0a192f;
-  color: white;
+  font-family: 'Open Sans', sans-serif; 
 
   @apply bg-slate-500 dark:bg-estranho text-white transition-colors duration-300
 }
@@ -25,7 +23,7 @@ body {
 }
 
 .name-typewriter-animation {
-  @apply after:absolute after:inset-0 after:bg-white after:w-1 after:h-[85%] after:animate-blink before:absolute before:inset-0 before:bg-estranho before:animate-typewriter
+  @apply after:absolute after:inset-0 after:bg-white after:w-1 after:h-[85%] after:animate-typewriter_and_blink before:absolute before:inset-0 before:bg-estranho before:animate-typewriter
 }
 
 svg {

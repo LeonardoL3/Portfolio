@@ -14,10 +14,10 @@ const Home: NextPage = () => {
 
 	return (
 		<main>
-			<section id="home">
-				<div className="flex h-screen items-center justify-evenly flex-row-reverse">
+			<section id="home" className="h-screen">
+				<div className="flex h-[calc(100%-120px)] items-center justify-evenly flex-col lg:flex-row-reverse">
 
-					<div className="rounded-full overflow-hidden border text-[0]">
+					<div className="rounded-full overflow-hidden border text-[0] m-4">
 						<Image
 							src={'https://github.com/Leonardo334.png'}
 							width="422px"
@@ -26,10 +26,10 @@ const Home: NextPage = () => {
 							quality={100}
 						/>
 					</div>
-					<div className="mx-8">
-						<span className="text-3xl block py-4"> Hi there! My name is </span>
-						<h1 className="relative text-neutral-500 text-7xl py-2 font-[monospace] name-typewriter-animation">
-							<span className="whitespace-nowrap">Leonardo Lazzaretti.</span>
+					<div className="mx-8 text-center">
+						<span className="text-2xl md:text-3xl block py-4"> Hi there! My name is </span>
+						<h1 className="relative text-neutral-500 py-2 font-[monospace] name-typewriter-animation whitespace-nowrap w-fit mx-auto text-3xl xl:text-7xl md:text-6xl">
+							Leonardo Lazzaretti.
 						</h1> 
 						<p className="text-neutral-300 py-4"> {t?.description} </p>
 					</div>
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 			<section id="projects" className="mb-24">
 				<div className="max-w-[1280px] mx-auto px-6">
 					<h2 className="text-xl md:text-3xl py-12 text-neutral-300"> {t?.projects} </h2>
-					<div className="grid grid-cols-projects auto-rows-fr gap-3">
+					<div className="grid grid-cols-projects auto-rows-fr gap-6">
 						{githubProjects.map((project) => {
 							return (
 								<a href={project.repositoryUrl} key={project.title} className="group min-h-[452px] bg-transparent border-[1px] border-solid border-neutral-500 rounded-lg overflow-hidden">

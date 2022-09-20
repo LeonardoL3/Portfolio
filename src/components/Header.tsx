@@ -21,8 +21,8 @@ const Header = () => {
 
 
 	return (
-		<header className="fixed top-0 right-0 h-24 px-12">
-			<div className="flex items-center justify-end h-full gap-4">
+		<header>
+			<div className="flex items-center justify-end gap-4 p-12">
 				<IconButton 
 					name="light" 
 					onClick={switchThemes} 
