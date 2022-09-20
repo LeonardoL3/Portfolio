@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 					<div className="mx-8">
 						<span className="text-3xl block py-4"> Hi there! My name is </span>
 						<h1 className="relative text-neutral-500 text-7xl py-2 font-[monospace] name-typewriter-animation">
-							Leonardo Lazzaretti.
+							<span className="whitespace-nowrap">Leonardo Lazzaretti.</span>
 						</h1> 
 						<p className="text-neutral-300 py-4"> {t?.description} </p>
 					</div>
