@@ -15,33 +15,37 @@ const Header = () => {
 	console.log('aspAth', asPath)
 
 	const switchThemes = (event: any) => {
+		console.log(event)
 		setTheme(event.target.name)
 	}
 
 
 	return (
-		<header className="fixed top-0 right-0 h-24 px-12">
-			<div className="flex items-center justify-end h-full gap-4">
+		<header>
+			<div className="flex items-center justify-end gap-4 p-12">
+
+				<div>
+					<Link href={'/pt-br'} locale="pt-br">
+						<a> [pt] </a>
+					</Link>
+					<Link href={'/en-us'} locale="en-us">
+						<a> [en] </a>
+					</Link>
+					<Link href={'/es-es'} locale="es-es">
+						<a> [es] </a>
+					</Link>
+				</div>
+
 				<IconButton 
-					name="light" 
-					onClick={switchThemes} 
-					icon={<Sun size={24} color={currentLightIconMode.color} weight={currentLightIconMode.weight} />} 
+					name="light"  
+					onClick={switchThemes}
+					icon={<Sun className="pointer-events-none" size={24} color={currentLightIconMode.color} weight={currentLightIconMode.weight} />} 
 				/>
 				<IconButton 
 					name="dark" 
-					onClick={switchThemes} 
-					icon={<Moon size={24} color={currentDarkIconMode.color} weight={currentDarkIconMode.weight} />}
+					onClick={switchThemes}
+					icon={<Moon className="pointer-events-none" size={24} color={currentDarkIconMode.color} weight={currentDarkIconMode.weight} />}
 				/>
-
-				<Link href={'/pt-br'} locale="pt-br">
-					<a> ptBr</a>
-				</Link>
-				<Link href={'/en-us'} locale="en-us">
-					<a> en</a>
-				</Link>
-				<Link href={'/es-es'} locale="es-es">
-					<a> es</a>
-				</Link>
 			</div>
 		</header> 
 	)
