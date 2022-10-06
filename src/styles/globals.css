@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -15,17 +11,13 @@ html {
 body {
   font-family: 'Open Sans', sans-serif; 
 
-  @apply bg-slate-500 dark:bg-estranho text-white transition-colors duration-300
+  @apply bg-light-100 dark:bg-dark-900 text-white transition-colors duration-150
 }
 
-.dark-transition {
-  @apply transition-colors duration-300
+.dt {
+  @apply transition-colors duration-150
 }
 
 .name-typewriter-animation {
-  @apply after:absolute after:inset-0 after:bg-white after:w-1 after:h-[85%] after:animate-typewriter_and_blink before:absolute before:inset-0 before:bg-estranho before:animate-typewriter
-}
-
-svg {
-  pointer-events: none;
+  @apply after:transition-colors after:duration-150 before:transition-colors before:duration-150 after:absolute after:dark:bg-white after:inset-0 after:bg-light-900 after:w-1 after:h-[85%] after:animate-typewriter_and_blink before:absolute before:inset-0 before:bg-light-100 before:dark:bg-dark-900 before:animate-typewriter
 }

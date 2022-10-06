@@ -44,5 +44,4 @@ export const githubProjects: IGithubProjects[] = [
 		tags: ['Next', 'Typescript', 'tailwind'],
 		cover: '/assets/te.jpg',
 	},
-
 ]
