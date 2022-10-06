@@ -7,14 +7,16 @@ import { useContext } from 'react'
 import { TranslationContext } from '../contexts/TranslationContext'
 import { Link } from 'react-scroll'
 
+
 const Home: NextPage = () => {
 
 
 	const { t } = useContext(TranslationContext)
 
 	return (
-		<main id="scroll-container" className="scroll-container">
+		<main>
 			<section id="home" className="h-screen">
+				{/* enquanto tiver smooth scroll é h-full, se não é h-[calc(100%-240px)] */}
 				<div className="flex h-[calc(100%-240px)] items-center justify-evenly flex-col lg:flex-row-reverse">
 
 					<div className="rounded-full overflow-hidden border-2 border-light-900 dark:border-light-100 text-[0] m-4 dt">
@@ -35,6 +37,7 @@ const Home: NextPage = () => {
 					</div>
 				</div>
 
+				{/* esse -mt-24 só existe enquanto tiver smooth scroll */}
 				<div>
 					<Link to='projects' smooth={true}>
 						<ArrowDown 
