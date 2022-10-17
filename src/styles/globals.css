@@ -7,7 +7,6 @@
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 body {
@@ -21,14 +20,9 @@ body {
 }
 
 .name-typewriter-animation {
-  @apply after:transition-colors after:duration-150 before:transition-colors before:duration-150 after:absolute after:dark:bg-white after:inset-0 after:bg-light-900 after:w-1 after:h-[85%] after:animate-typewriter_and_blink before:absolute before:inset-0 before:bg-light-100 before:dark:bg-dark-900 before:animate-typewriter
+  @apply after:transition-colors after:duration-150 before:transition-colors before:duration-150 after:absolute after:dark:bg-white after:inset-0 after:bg-light-900 after:w-[1px] after:h-[85%] after:animate-typewriter_and_blink before:absolute before:inset-0 before:bg-light-100 before:dark:bg-dark-900 before:animate-typewriter
 }
 
 .scroll-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  will-change: transform;
+  @apply fixed top-0 left-0 w-full overflow-hidden will-change-transform
 }
