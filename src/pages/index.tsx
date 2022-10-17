@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 		<>
 			<main id="home" className="h-screen">
 				<div className="flex h-[calc(100%-240px)] items-center justify-evenly flex-col lg:flex-row-reverse">
-					<div className="text-[0] m-4 dt">
+					<div className="text-[0] m-4 dt max-w-[280px] sm:max-w-full">
 						{/*https://github.com/Leonardo334.png */}
 						<Image
 							src={'https://github.com/Leonardo334.png'}
