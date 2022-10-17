@@ -23,8 +23,9 @@ const Header = () => {
 	return (
 		<header>
 			<div className="flex items-center justify-end gap-4 p-12">
+				
 
-				<div>
+				<div className=" text-black dark:text-white">
 					<Link href={'/pt-br'} locale="pt-br">
 						<a> [pt] </a>
 					</Link>
