@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 					</div>
 					{/* esse -mt-24 só existe enquanto tiver smooth scroll */}
 				</div>
-				<Link to='projects' smooth={true} className="h-[120px] flex items-center">
+				<Link to='projects' smooth={true} className="block mt-5">
 					<ArrowDown 
 						size={24} 
 						className="mx-auto animate-arrow_jumping dark:text-dark-100 text-light-700 cursor-pointer" 
