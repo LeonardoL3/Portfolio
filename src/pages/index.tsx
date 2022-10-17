@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 		<>
 			<main id="home" className="h-screen">
 				<div className="flex h-[calc(100%-240px)] items-center justify-evenly flex-col lg:flex-row-reverse">
-					<div className="text-[0] m-4 dt">
+					<div className="text-[0] m-4 dt max-w-[280px] sm:max-w-full">
 						{/*https://github.com/Leonardo334.png */}
 						<Image
 							src={'https://github.com/Leonardo334.png'}
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 					</div>
 					{/* esse -mt-24 só existe enquanto tiver smooth scroll */}
 				</div>
-				<Link to='projects' smooth={true} className="h-[120px] flex items-center">
+				<Link to='projects' smooth={true} className="block mt-5">
 					<ArrowDown 
 						size={24} 
 						className="mx-auto animate-arrow_jumping dark:text-dark-100 text-light-700 cursor-pointer" 
