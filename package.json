@@ -18,6 +18,7 @@
     "phosphor-react": "^1.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
     "react-scroll": "^1.8.7",
     "resize-observer-polyfill": "^1.5.1",
     "three": "^0.142.0"

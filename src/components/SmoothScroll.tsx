@@ -7,6 +7,11 @@ import ResizeObserver from 'resize-observer-polyfill'
 
 
 const SmoothScroll = ({ children }: {children: ReactNode}) => {
+
+	if (typeof window == 'undefined') {
+		return null
+	}
+
 	const scrollRef = useRef<any>()
   
 	const [pageHeight, setPageHeight] = useState(0)
