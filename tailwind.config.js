@@ -32,6 +32,9 @@ module.exports = {
 			gridTemplateColumns: {
 				'projects': 'repeat(auto-fit, minmax(291px, 1fr))',
 			},
+			gridTemplateRows: {
+				document: '3fr fit-content(100%) 1fr',
+			},
 			animation: {
 				typewriter: 'typewriter 6s steps(20) 1s infinite alternate',
 				typewriter_and_blink: 'typewriter steps(20) 6s 1s infinite alternate, blink 300ms steps(2, start) infinite alternate',
