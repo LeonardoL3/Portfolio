@@ -4,13 +4,12 @@ import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import { TranslationProvider } from '../contexts/TranslationContext'
 import Head from 'next/head'
-import SmoothScroll from '../components/SmoothScroll'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
 
 	return ( 
-		<>
+		<div className="fixed top-0 left-0 w-full">
 			<Head>
 				<title> leonard.zz </title>
 				<link rel="shortcut icon" href="/favicon.png" />
@@ -21,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 				</TranslationProvider>
 			</ThemeProvider>
-		</>
+		</div>
 		/*<SmoothScroll>
 			<Head>
 				<title> leonard.zz </title>

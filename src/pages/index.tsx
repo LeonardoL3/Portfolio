@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 				<ThemeToast />
 				<Languages />
 			</header>
-			<main className="h-screen">
+			<main className="h-[calc(100vh-66px)] sm:h-screen">
 				<div className="h-full grid grid-rows-document auto-cols-fr items-center">
 					<div className="flex items-center justify-around flex-col-reverse lg:flex-row mx-12">
 						<div>
