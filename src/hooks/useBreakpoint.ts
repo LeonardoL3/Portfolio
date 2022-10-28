@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
 
 export const useBreakpoint = () => {
-	if (typeof window === 'undefined') return
-	const [breakpoint, setBreakpoint] = useState(1200)
+	const [breakpoint, setBreakpoint] = useState(0)
 	const resize = () => {
 		setBreakpoint(window.innerWidth)
 	}
 
 	useEffect(() => {
-		if (typeof window === 'undefined') return
+		resize()
+	}, [])
+
+	useEffect(() => {
 		window.addEventListener('resize', resize)
 
 		return () => {
@@ -18,6 +20,8 @@ export const useBreakpoint = () => {
 
 	
 	let currentBreakpoint
+
+	console.log(breakpoint)
 
 	switch(true){
 

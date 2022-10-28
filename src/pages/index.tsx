@@ -2,25 +2,25 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import { githubProjects } from '../mock/github-projects'
 
-import { LinkedinLogo, GithubLogo, WhatsappLogo, Envelope, ArrowDown, GitFork, Atom } from 'phosphor-react'
-import { useContext } from 'react'
+import { LinkedinLogo, GithubLogo, WhatsappLogo, Envelope, ArrowDown, GitFork } from 'phosphor-react'
+import React, { useContext } from 'react'
 import { TranslationContext } from '../contexts/TranslationContext'
 import { Link } from 'react-scroll'
 import { ThemeToast } from '../components/ThemeToast'
 import { Languages } from '../components/Languages'
 import { SiReact, SiJavascript, SiTypescript, SiNodedotjs, SiPrisma } from 'react-icons/si'
-import { useTheme } from 'next-themes'
 import { useBreakpoint } from '../hooks/useBreakpoint'
+import { useIconsThemeMode } from '../hooks/useIconThemeMode'
 
 const Home: NextPage = () => {
 
-	
-	if (typeof window === 'undefined') return null
 	const { t } = useContext(TranslationContext)
-	const { theme } = useTheme()
+	const { currentTheme } = useIconsThemeMode()
 	const bk = useBreakpoint()
 
 	const iconsSize = bk === 'sm' ? 20 : 80
+
+	if (!iconsSize || !currentTheme) return null
 
 	return (
 		<>
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 				<ThemeToast />
 				<Languages />
 			</header>
-			<main className="h-[calc(100vh-66px)]">
+			<main className="h-screen">
 				<div className="h-full grid grid-rows-document auto-cols-fr items-center">
 					<div className="flex items-center justify-around flex-col-reverse lg:flex-row mx-12">
 						<div>
@@ -50,13 +50,13 @@ const Home: NextPage = () => {
 						</div>
 					</div>
 					<div className="flex justify-center flex-wrap gap-8">
-						<SiReact size={iconsSize} color={theme === 'dark' ? 'white' : 'black'} className="dt" />
-						<SiJavascript size={iconsSize} color={theme === 'dark' ? 'white' : 'black'} className="dt" />
-						<SiTypescript size={iconsSize} color={theme === 'dark' ? 'white' : 'black'}className="dt"  />
-						<SiNodedotjs size={iconsSize} color={theme === 'dark' ? 'white' : 'black'} className="dt" />
-						<SiPrisma size={iconsSize} color={theme === 'dark' ? 'white' : 'black'}  className="dt"/>
+						<SiReact size={iconsSize} color={currentTheme === 'dark' ? 'white' : 'black'} className="dt" />
+						<SiJavascript size={iconsSize} color={currentTheme === 'dark' ? 'white' : 'black'} className="dt" />
+						<SiTypescript size={iconsSize} color={currentTheme === 'dark' ? 'white' : 'black'}className="dt"  />
+						<SiNodedotjs size={iconsSize} color={currentTheme === 'dark' ? 'white' : 'black'} className="dt" />
+						<SiPrisma size={iconsSize} color={currentTheme === 'dark' ? 'white' : 'black'}  className="dt"/>
 					</div>
-					<Link to='projects' smooth={true} className="block">
+					<Link to='projects' smooth={true} className="block mb-4">
 						<ArrowDown 
 							size={24} 
 							className="mx-auto animate-arrow_jumping dark:text-dark-100 text-light-700 cursor-pointer" 
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
 				</div>
 			</main>
  
-			<section id="projects" className="mb-24 min-h-screen">
+			<section id="projects" className="min-h-screen">
 				<div className="max-w-[1280px] mx-auto px-6">
 					<h2 className="text-xl md:text-3xl py-12 text-light-900 dark:text-dark-300 dt"> {t.projects} </h2>
 					<div className="grid grid-cols-projects auto-rows-fr gap-6">

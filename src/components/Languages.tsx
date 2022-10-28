@@ -1,14 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 export const Languages = () => {
-
-	if (typeof window === 'undefined') return null
-
-	const  { asPath } = useRouter()
-
-	console.log('aspAth', asPath)
 
 	//absolute right-0 m-8
 	return (

@@ -2,41 +2,33 @@ import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { Sun, Moon } from 'phosphor-react'
 
-interface ThemesIconsMode {
-  color: string
-}
 
 interface IconsThemeMode {
-  currentIconMode: ThemesIconsMode
+  currentIconMode: string
 	IconElement: typeof Sun | typeof Moon
+	currentTheme: string
 }
 
 export const useIconsThemeMode = (): IconsThemeMode => {
-
-
-	const [themeIconMode, setThemeIconMode] = useState('')
-	const { resolvedTheme } = useTheme()
-
-	useEffect(() => setThemeIconMode(resolvedTheme || ''), [])
-
-	const isCurrentThemeModeLight = themeIconMode === 'light' 
-
-	const currentIconMode: ThemesIconsMode = {
-		color: !isCurrentThemeModeLight ? '#FFF' : '#000'
-	}
-
-	const IconElement = resolvedTheme && resolvedTheme === 'dark' ? Moon : Sun 
-
+	const [currentTheme, setCurrentTheme] = useState('')
+	
+	
+	const { theme = '' } = useTheme()
+	
 	useEffect(() => {
-		if (resolvedTheme){
-			setThemeIconMode(resolvedTheme || '')
-		}
-	}, [resolvedTheme])
+		setCurrentTheme(theme)
+	}, [theme])
 
+	const isCurrentThemeModeLight = currentTheme && currentTheme === 'light' 
+
+	const currentIconMode =  !isCurrentThemeModeLight ? '#FFF' : '#000'
+	
+	const IconElement = currentTheme && currentTheme === 'dark' ? Moon : Sun 
 
 	return {
 		currentIconMode,
-		IconElement
+		IconElement,
+		currentTheme
 	}
 
 }
