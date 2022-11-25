@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 				<div className="h-full grid grid-rows-document auto-cols-fr items-center">
 					<Me t={t} />
 					<IconsGrid iconsSize={iconsSize} currentTheme={currentTheme} />
-					<Link to='projects' smooth={true} className="block mb-4">
+					<Link to='projects' smooth={true} className="block mb-4" aria-hidden>
 						<FaArrowDown 
 							size={18} 
 							className="mx-auto animate-arrow_jumping dark:text-dark-100 text-light-700 cursor-pointer" 

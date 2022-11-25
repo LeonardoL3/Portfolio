@@ -12,6 +12,7 @@ interface IGithubProjects {
   tags: string[],
   repositoryUrl: string,
   cover: string
+  deploy?: string
 }
 
 export const githubProjects: IGithubProjects[] = [
@@ -52,12 +53,28 @@ export const githubProjects: IGithubProjects[] = [
 			es: 'Sistema de diseño'
 		},
 		description: {
-			pt: 'Meu design system pessoal para meus projetos. deployado aqui: leonardol3.github.io/Design-System' ,
-			en: 'My personal design system for my projects. deployed here: leonardol3.github.io/Design-System',
-			es: 'Mi sistema de diseño personal para mis proyectos. desplegado aquí'
+			pt: 'Meu design system pessoal para meus projetos.' ,
+			en: 'My personal design system for my projects.',
+			es: 'Mi sistema de diseño personal para mis proyectos.'
 		},
+		deploy: 'https://leonardol3.github.io/Design-System',
 		repositoryUrl: 'https://github.com/LeonardoL3/Design-System',
 		tags: ['Storybook', 'Turbopack', 'React', 'Github Actions'],
+		cover: ''
+	},
+	{
+		title: {
+			pt: 'React Blog',
+			en: 'React Blog',
+			es: 'React Blog'
+		},
+		description: {
+			pt: 'Uma aplicação react using webhooks.',
+			en: 'A react blog application using webhooks.',
+			es: 'Una aplicación de blog de reacción que utiliza webhooks.'
+		},
+		repositoryUrl: 'https://github.com/LeonardoL3/React-Blog',
+		tags: ['React', 'Stripe', 'Typescript'],
 		cover: ''
 	}
 ]
