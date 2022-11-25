@@ -3,7 +3,7 @@ import { ptBR } from './pt-br'
 import { esES } from './es-es'
 
 export const localesData = {
-	'en-US': enUS,
-	'pt-BR': ptBR,
-	'es-ES': esES
+	'en': enUS,
+	'pt': ptBR,
+	'es': esES
 }

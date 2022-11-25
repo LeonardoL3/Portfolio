@@ -3,16 +3,15 @@ import Link from 'next/link'
 
 export const Languages = () => {
 
-	//absolute right-0 m-8
 	return (
 		<div className=" text-black dark:text-white [&>*]:mr-2 text-sm">
-			<Link href={'/pt-br'} locale="pt-br">
+			<Link href='/' locale="pt">
 				<a> [pt] </a>
 			</Link>
-			<Link href={'/en-us'} locale="en-us">
+			<Link href={'/'} locale="en">
 				<a> [en] </a>
 			</Link>
-			<Link href={'/es-es'} locale="es-es">
+			<Link href={'/'} locale="es">
 				<a> [es] </a>
 			</Link>
 		</div>

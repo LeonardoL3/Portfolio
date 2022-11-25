@@ -2,7 +2,7 @@ import { localesData } from '../locale'
 
 export interface Translations {
   description: string;
-  projects: string;
+  projects_description: string;
   salutation: string;
 }
 

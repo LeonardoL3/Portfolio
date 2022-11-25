@@ -9,6 +9,7 @@ interface LocaleProviderProps {
 
 interface TranslationContext {
 	t: Translations
+	language: 'pt'| 'en'| 'es'
 }
 
 
@@ -16,18 +17,16 @@ export const TranslationContext = createContext({} as TranslationContext)
 
 export const TranslationProvider = ({children}: LocaleProviderProps) => {
 
-	const { locale } = useRouter()
+	const { locale = 'es' } = useRouter()
+
+	const language = locale as 'pt'| 'en'| 'es'
+
+	console.log('locale', locale)
 
 	const t = localesData[locale as LocalesType]
 
-	/* const value = useMemo(() => {
-		return {
-			t
-		}
-	}, [locale])*/
-
 	return (
-		<TranslationContext.Provider value={{t}}>
+		<TranslationContext.Provider value={{t, language}}>
 			{children}
 		</TranslationContext.Provider>
 	)

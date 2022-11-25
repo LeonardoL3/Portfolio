@@ -14,9 +14,11 @@ import { useIconsThemeMode } from '../hooks/useIconThemeMode'
 
 const Home: NextPage = () => {
 
-	const { t } = useContext(TranslationContext)
+	const { t, language } = useContext(TranslationContext)
 	const { currentTheme } = useIconsThemeMode()
 	const bk = useBreakpoint()
+
+	console.log(t)
 
 	const iconsSize = bk === 'sm' ? 20 : 80
 
@@ -32,7 +34,7 @@ const Home: NextPage = () => {
 				<div className="h-full grid grid-rows-document auto-cols-fr items-center">
 					<div className="flex items-center justify-around flex-col-reverse lg:flex-row mx-12">
 						<div>
-							<span className="text-center lg:text-start text-xl md:text-2xl block py-4 text-light-900 dark:text-dark-200 dt"> {t.salutation} </span>
+							<span className="text-center lg:text-start text-xl md:text-2xl block py-4 text-light-900 dark:text-dark-200 dt"> {t?.salutation} </span>
 							<h1 
 								className="text-center mx-auto sm:mx-0 lg:text-start relative text-light-900 dark:text-dark-200 dt py-2 font-[monospace] name-typewriter-animation whitespace-nowrap w-fit text-2xl sm:text-3xl xl:text-7xl md:text-5xl">
 								Leonardo Lazzaretti.
@@ -67,19 +69,19 @@ const Home: NextPage = () => {
  
 			<section id="projects" className="min-h-screen">
 				<div className="max-w-[1280px] mx-auto px-6">
-					<h2 className="text-xl md:text-3xl py-12 text-light-900 dark:text-dark-300 dt"> {t.projects} </h2>
+					<h2 className="text-xl md:text-3xl py-12 text-light-900 dark:text-dark-300 dt"> {t?.projects_description} </h2>
 					<div className="grid grid-cols-projects auto-rows-fr gap-6">
 						{githubProjects.map((project) => {
 							return (
-								<a href={project.repositoryUrl} key={project.title} className="group min-h-[452px] flex flex-col bg-transparent border-[1px] border-solid dark:border-neutral-500 border-light-900 rounded-lg overflow-hidden">
+								<a href={project.repositoryUrl} key={project.cover} className="group min-h-[452px] flex flex-col bg-transparent border-[1px] border-solid dark:border-neutral-500 border-light-900 rounded-lg overflow-hidden">
 									<header>
 										<img src={project.cover} className="h-60 w-full object-cover group-hover:brightness-[.6] transition-all delay-75" />
 									</header>
 									<section className="mx-4 flex-1 group-hover:brightness-[.6] transition-all delay-75">
 										<div className="pt-4">
-											<h2 className="text-[18px] mb-4 font-bold dark:text-dark-100 text-light-700"> {project.title} </h2>
+											<h2 className="text-[18px] mb-4 font-bold dark:text-dark-100 text-light-700"> {project.title[language]} </h2>
 											<p className="text-sm dark:text-dark-100 text-light-700">
-												{project.description.pt}
+												{project.description[language]}
 											</p>
 										</div>
 									</section>
