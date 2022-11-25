@@ -1,6 +1,5 @@
 import { githubProjects } from "../mock/github-projects"
 import { BiGitRepoForked } from 'react-icons/bi'
-import Link from "next/link"
 import { NextLink } from "./Link"
 
 interface ProjectsProps {
@@ -12,7 +11,8 @@ export function Projects({language}: ProjectsProps){
 		<div className="grid grid-cols-projects auto-rows-fr gap-6">
 			{githubProjects.map((project) => {
 				return (
-					<a href={project.repositoryUrl} key={project.cover} className="group min-h-[452px] flex flex-col bg-transparent border-[1px] border-solid dark:border-dark-200 border-light-900 rounded-lg overflow-hidden">
+					<NextLink external={false} href={project.repositoryUrl} key={project.cover} className="group min-h-[452px] flex flex-col bg-transparent border-[1px] border-solid dark:border-dark-200 border-light-900 rounded-lg overflow-hidden">
+						<>
 						<header>
 							<img src={project.cover} className="h-60 w-full object-cover group-hover:brightness-[.6] transition-all delay-75" />
 						</header>
@@ -33,7 +33,8 @@ export function Projects({language}: ProjectsProps){
 								<BiGitRepoForked size={24} />
 							</span>
 						</footer>
-					</a>
+						</>
+					</NextLink>
 				)
 			})} 
 				</div>

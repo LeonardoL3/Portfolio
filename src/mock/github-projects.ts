@@ -29,7 +29,7 @@ export const githubProjects: IGithubProjects[] = [
 		},
 		tags: ['Node', 'Clean Architecture', 'Typescript'],
 		repositoryUrl: 'ttps://github.com/LeonardoL3/Next.js-charts',
-		cover: '/assets/soccer-node-api.jpg',
+		cover: '/assets/node_express.png',
 	},
 	{
 		title: {
@@ -44,7 +44,7 @@ export const githubProjects: IGithubProjects[] = [
 		},
 		repositoryUrl: 'https://github.com/LeonardoL3/Next.js-charts',
 		tags: ['Next', 'Typescript', 'tailwind'],
-		cover: '/assets/te.jpg',
+		cover: '/assets/portfolio.jpg',
 	},
 	{
 		title: {
@@ -60,7 +60,7 @@ export const githubProjects: IGithubProjects[] = [
 		deploy: 'https://leonardol3.github.io/Design-System',
 		repositoryUrl: 'https://github.com/LeonardoL3/Design-System',
 		tags: ['Storybook', 'Turbopack', 'React', 'Github Actions'],
-		cover: ''
+		cover: '/assets/design_system.png'
 	},
 	{
 		title: {
@@ -75,6 +75,6 @@ export const githubProjects: IGithubProjects[] = [
 		},
 		repositoryUrl: 'https://github.com/LeonardoL3/React-Blog',
 		tags: ['React', 'Stripe', 'Typescript'],
-		cover: ''
+		cover: '/assets/react-blog.jpeg'
 	}
 ]

@@ -18,7 +18,7 @@ export function Me({t}: MeProps){
 			</div>
 			<div className="text-[0] border-black dark:border-white  border-2 rounded-full m-2 max-w-[168px] sm:max-w-[262px] lg:max-w-full">
 				<Image
-					src={'https://github.com/Leonardo334.png'}
+					src='/assets/me.jpeg'
 					width="360px"
 					height="360px"
 					className="rounded-full"
