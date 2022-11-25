@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return ( 
 		<div>
 			<Head>
-				<title> leonard.zz </title>
+				<title> Leonardo.zz </title>
 				<link rel="shortcut icon" href="/favicon.png" />
 			</Head>
 			<ThemeProvider attribute="class" enableSystem>

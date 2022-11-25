@@ -23,7 +23,7 @@ export function ThemeToast(){
 						className="pointer-events-none" 
 						size={28} 
 						color={currentIconMode} 
-						weight='fill' 
+						fill={'true'}
 					/>
 				}
 			/>

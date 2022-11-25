@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import { Sun, Moon } from 'phosphor-react'
-
+import { FiMoon, FiSun } from 'react-icons/fi'
 
 interface IconsThemeMode {
   currentIconMode: string
-	IconElement: typeof Sun | typeof Moon
+	IconElement: typeof FiSun | typeof FiMoon
 	currentTheme: string
 }
 
@@ -23,7 +22,7 @@ export const useIconsThemeMode = (): IconsThemeMode => {
 
 	const currentIconMode =  !isCurrentThemeModeLight ? '#FFF' : '#000'
 	
-	const IconElement = currentTheme && currentTheme === 'dark' ? Moon : Sun 
+	const IconElement = currentTheme && currentTheme === 'dark' ? FiMoon : FiSun 
 
 	return {
 		currentIconMode,
