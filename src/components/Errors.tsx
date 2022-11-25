@@ -1,6 +1,6 @@
-import { Button } from "./Button";
+import { Button } from './Button'
 import { AiFillHome } from 'react-icons/ai'
-import Link from "next/link";
+import Link from 'next/link'
 
 interface ErrorsProps {
     statusCode: number
@@ -8,17 +8,17 @@ interface ErrorsProps {
 }
 
 export function Errors({statusCode, message}: ErrorsProps){
-    return (
-        <section>
-            <div className='flex flex-col gap-12 justify-center items-center h-screen'>
-                <span>{statusCode}</span>
-                <span>{message}</span>
-                <Link href='/'>
-                <Button className="border-2 p-4 rounded-md flex items-center gap-2">
+	return (
+		<section>
+			<div className='flex flex-col gap-12 justify-center items-center h-screen'>
+				<span>{statusCode}</span>
+				<span>{message}</span>
+				<Link href='/'>
+					<Button className="border-2 p-4 rounded-md flex items-center gap-2">
                     Back to home <AiFillHome size={18} className='inline' /> 
-                </Button> 
-                </Link>
-            </div>
-        </section>
-    )
+					</Button> 
+				</Link>
+			</div>
+		</section>
+	)
 }

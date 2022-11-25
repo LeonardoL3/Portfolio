@@ -1,9 +1,9 @@
-import { SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiWhatsapp } from 'react-icons/si'
 import { FaEnvelope } from 'react-icons/fa'
 
 export function Footer(){
-  return (
-  	<footer>
+	return (
+		<footer>
 			<div className="flex justify-center h-24 items-center gap-12 text-black dark:text-white">
 				<SiLinkedin size={24} className="cursor-pointer" />
 				<SiGithub size={24} className="cursor-pointer" />
@@ -11,5 +11,5 @@ export function Footer(){
 				<SiWhatsapp size={24} className="cursor-pointer" />
 			</div>
 		</footer>
-    )
+	)
 }

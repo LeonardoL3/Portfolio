@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { Translations } from "../types/translations";
+import Image from 'next/image'
+import { Translations } from '../types/translations'
 
 interface MeProps {
 	t: Translations
@@ -8,7 +8,7 @@ interface MeProps {
 export function Me({t}: MeProps){
 	return (
 		<div className="flex items-center justify-around flex-col-reverse lg:flex-row mx-12">
-				<div>
+			<div>
 				<span className="text-center lg:text-start text-xl md:text-2xl block py-4 text-light-900 dark:text-dark-200 dt"> {t.salutation} </span>
 				<h1 
 					className="text-center mx-auto sm:mx-0 lg:text-start relative text-light-900 dark:text-dark-200 dt py-2 font-[monospace] name-typewriter-animation whitespace-nowrap w-fit text-2xl sm:text-3xl xl:text-7xl md:text-5xl">

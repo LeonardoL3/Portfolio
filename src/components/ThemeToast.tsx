@@ -18,12 +18,12 @@ export function ThemeToast(){
 		<div>
 			<Button 
 				onClick={switchThemes}>
-					<IconElement 
-						className="pointer-events-none" 
-						size={28} 
-						color={currentIconMode} 
-						fill={'true'}
-					/>
+				<IconElement 
+					className="pointer-events-none" 
+					size={28} 
+					color={currentIconMode} 
+					fill={'true'}
+				/>
 			</Button>
 		</div>
 	)
