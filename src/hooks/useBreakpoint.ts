@@ -21,8 +21,6 @@ export const useBreakpoint = () => {
 	
 	let currentBreakpoint
 
-	console.log(breakpoint)
-
 	switch(true){
 
 	case breakpoint > 640 && breakpoint <= 768:

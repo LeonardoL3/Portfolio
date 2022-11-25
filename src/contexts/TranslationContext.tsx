@@ -21,8 +21,6 @@ export const TranslationProvider = ({children}: LocaleProviderProps) => {
 
 	const language = locale as 'pt'| 'en'| 'es'
 
-	console.log('locale', locale)
-
 	const t = localesData[locale as LocalesType]
 
 	return (
