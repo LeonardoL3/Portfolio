@@ -28,7 +28,7 @@ export const githubProjects: IGithubProjects[] = [
 			es: 'Aplicación de nodo para registrar y conectar usuarios. Hecho siguiendo el método de desarrollo TDD y DDD',
 		},
 		tags: ['Node', 'Clean Architecture', 'Typescript'],
-		repositoryUrl: 'ttps://github.com/LeonardoL3/Next.js-charts',
+		repositoryUrl: 'https://github.com/LeonardoL3/node-clean-api',
 		cover: '/assets/node_express.png',
 	},
 	{
@@ -42,7 +42,7 @@ export const githubProjects: IGithubProjects[] = [
 			pt: 'Código do meu portifolio pessoal. Feito com ❤️ e Next.js.',
 			es: 'Código de mi portafolio personal. Hecho con ❤️ y Next.js.',
 		},
-		repositoryUrl: 'https://github.com/LeonardoL3/Next.js-charts',
+		repositoryUrl: 'https://github.com/LeonardoL3/Portfolio',
 		tags: ['Next', 'Typescript', 'tailwind'],
 		cover: '/assets/portfolio.jpg',
 	},
