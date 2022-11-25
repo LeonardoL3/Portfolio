@@ -1,6 +1,6 @@
 export * from './Footer'
 export * from './Header'
-export * from './IconButton'
+export * from './Button'
 export * from './IconsGrid'
 export * from './Languages'
 export * from './Me'

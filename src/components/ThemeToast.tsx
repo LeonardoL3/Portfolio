@@ -1,6 +1,6 @@
 import { useTheme } from 'next-themes'
 import { useIconsThemeMode } from '../hooks/useIconThemeMode'
-import { IconButton } from './IconButton'
+import { Button } from './Button'
 
 
 export function ThemeToast(){
@@ -16,17 +16,15 @@ export function ThemeToast(){
 
 	return (
 		<div>
-			<IconButton 
-				onClick={switchThemes}
-				icon={
+			<Button 
+				onClick={switchThemes}>
 					<IconElement 
 						className="pointer-events-none" 
 						size={28} 
 						color={currentIconMode} 
 						fill={'true'}
 					/>
-				}
-			/>
+			</Button>
 		</div>
 	)
 }
