@@ -11,13 +11,12 @@ interface IconsGridProps {
  
 export function Skills({iconsSize, currentTheme}: IconsGridProps){
 
-    const [sliderRef] = useKeenSlider({
-        slides: {
-            perView: 5,
-        },
-        loop: true,
-		
-    })
+	const [sliderRef] = useKeenSlider({
+		slides: {
+			perView: 5,
+		},
+		loop: true,
+	})
 
 	console.log(iconsSize)
 
