@@ -6,7 +6,8 @@ import { Link } from 'react-scroll'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import { useIconsThemeMode } from '../hooks/useIconThemeMode'
 import { FaArrowDown } from 'react-icons/fa'
-import { Footer, Me, Projects, IconsGrid, Header } from '../components'
+import { Footer, Me, Projects, Skills, Header } from '../components'
+import { Tooltip } from '../components/Tooltip'
 
 
 const Home: NextPage = () => {
@@ -25,7 +26,7 @@ const Home: NextPage = () => {
 			<main className="h-[calc(100vh-66px)] sm:h-screen">
 				<div className="h-full grid grid-rows-document auto-cols-fr items-center">
 					<Me t={t} />
-					<IconsGrid iconsSize={iconsSize} currentTheme={currentTheme} />
+					<Skills iconsSize={iconsSize} currentTheme={currentTheme} />
 					<Link to='projects' smooth={true} className="block mb-4" aria-hidden>
 						<FaArrowDown 
 							size={18} 

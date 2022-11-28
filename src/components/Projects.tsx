@@ -1,4 +1,4 @@
-import { githubProjects } from '../mock/github-projects'
+import { githubProjects } from '../data/projects'
 import { BiGitRepoForked } from 'react-icons/bi'
 import { NextLink } from './Link'
 

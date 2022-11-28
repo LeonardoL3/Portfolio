@@ -1,14 +1,18 @@
-import { SiGithub, SiLinkedin, SiWhatsapp } from 'react-icons/si'
-import { FaEnvelope } from 'react-icons/fa'
+import { socials } from '../data/socials'
+import { Icon } from './Icon'
+import { NextLink } from './Link'
 
 export function Footer(){
 	return (
 		<footer>
 			<div className="flex justify-center h-24 items-center gap-12 text-black dark:text-white">
-				<SiLinkedin size={24} className="cursor-pointer" />
-				<SiGithub size={24} className="cursor-pointer" />
-				<FaEnvelope size={24} className="cursor-pointer" />
-				<SiWhatsapp size={24} className="cursor-pointer" />
+				{socials.map(social => (
+					<NextLink href={social.url}>
+						<a>
+							<Icon variant={social.label} size={24} />
+						</a>
+					</NextLink>
+				))}
 			</div>
 		</footer>
 	)
