@@ -14,7 +14,7 @@ export function Errors({statusCode, message}: ErrorsProps){
 				<span>{statusCode}</span>
 				<span>{message}</span>
 				<Link href='/'>
-					<Button className="border-2 p-4 rounded-md flex items-center gap-2">
+					<Button aria-label="back to home" className="border-2 p-4 rounded-md flex items-center gap-2">
                     Back to home <AiFillHome size={18} className='inline' /> 
 					</Button> 
 				</Link>

@@ -20,6 +20,7 @@ export function Me({t}: MeProps){
 				<Image
 					src='/assets/me.jpeg'
 					width="360px"
+					alt='Leonardo lazzaretti'
 					height="360px"
 					className="rounded-full"
 					quality={75}

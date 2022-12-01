@@ -1,6 +1,7 @@
 import { githubProjects } from '../data/projects'
 import { BiGitRepoForked } from 'react-icons/bi'
 import { NextLink } from './Link'
+import Image from 'next/image'
 
 interface ProjectsProps {
 	language: 'pt'| 'en' | 'es'
@@ -13,8 +14,8 @@ export function Projects({language}: ProjectsProps){
 				return (
 					<NextLink external={false} href={project.repositoryUrl} key={project.cover} className="group min-h-[452px] flex flex-col bg-transparent border-[1px] border-solid dark:border-dark-200 border-light-900 rounded-lg overflow-hidden">
 						<>
-							<header>
-								<img src={project.cover} className="h-60 w-full object-cover group-hover:brightness-[.6] transition-all delay-75" />
+							<header className='relative h-60 w-full absolute object-cover group-hover:brightness-[.6] transition-all delay-75'>
+								<Image layout='fill' alt={project.title[language]} src={project.cover} className='absolute' />
 							</header>
 							<section className="mx-4 flex-1 group-hover:brightness-[.6] transition-all delay-75">
 								<div className="pt-4">

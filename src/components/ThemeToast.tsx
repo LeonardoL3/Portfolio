@@ -17,6 +17,7 @@ export function ThemeToast(){
 	return (
 		<div>
 			<Button 
+				aria-label="theme toast"
 				onClick={switchThemes}>
 				<IconElement 
 					className="pointer-events-none" 

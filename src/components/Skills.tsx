@@ -14,11 +14,10 @@ export function Skills({iconsSize, currentTheme}: IconsGridProps){
 	const [sliderRef] = useKeenSlider({
 		slides: {
 			perView: 5,
+			spacing: 20
 		},
 		loop: true,
 	})
-
-	console.log(iconsSize)
 
 	return (
 		<div className="max-w-[50%] mx-auto">
