@@ -3,11 +3,10 @@ import { FiMoon, FiSun } from 'react-icons/fi'
 import { FaEnvelope } from 'react-icons/fa'
 
 import { SVGAttributes } from 'react'
-import { ZeroCurvatureEnding } from 'three'
 
 const skillIcons = {
 	React: SiReact,
-	Javascript: SiJavascript, 
+	Javascript: SiJavascript,
 	Typescript: SiTypescript,
 	Node: SiNodedotjs,
 	Prisma: SiPrisma,
@@ -23,7 +22,7 @@ const socialIcons = {
 	Linkedin: SiLinkedin,
 	Whatsapp: SiWhatsapp,
 	Gmail: FaEnvelope
-} 
+}
 
 const icons = Object.assign(skillIcons, socialIcons, {
 	Moon: FiMoon,
@@ -32,17 +31,17 @@ const icons = Object.assign(skillIcons, socialIcons, {
 
 export type SkillIcons = keyof typeof skillIcons
 export type SocialIcons = keyof typeof socialIcons
-type iconsType = keyof typeof icons 
+type iconsType = keyof typeof icons
 
 interface IconProps extends SVGAttributes<SVGElement> {
 	variant: iconsType
 	size: number
-}  
+}
 
 export function Icon({ variant, size ,...rest }: IconProps){
 	const Icon = icons[variant]
 
 	return (
-		<Icon size={size} {...rest} />   
+		<Icon size={size} {...rest} />
 	)
 }

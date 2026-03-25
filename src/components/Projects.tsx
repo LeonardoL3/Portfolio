@@ -14,8 +14,8 @@ export function Projects({language}: ProjectsProps){
 				return (
 					<NextLink external={false} href={project.repositoryUrl} key={project.cover} className="hover:scale-105 group min-h-[452px] flex flex-col bg-transparent border-[1px] border-solid dark:border-dark-200 border-light-900 rounded-lg overflow-hidden">
 						<>
-							<header className='relative h-60 w-full absolute object-cover transition-all delay-75'>
-								<Image layout='fill' alt={project.title[language]} src={project.cover} className='absolute object-cover' />
+							<header className='relative h-60 w-full transition-all delay-75'>
+								<Image fill alt={project.title[language]} src={project.cover} className='object-cover' />
 							</header>
 							<section className="mx-4 flex-1 transition-all delay-75">
 								<div className="pt-4">
@@ -37,7 +37,7 @@ export function Projects({language}: ProjectsProps){
 						</>
 					</NextLink>
 				)
-			})} 
+			})}
 		</div>
 	)
 }

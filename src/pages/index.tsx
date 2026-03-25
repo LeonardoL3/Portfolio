@@ -7,7 +7,6 @@ import { useBreakpoint } from '../hooks/useBreakpoint'
 import { useIconsThemeMode } from '../hooks/useIconThemeMode'
 import { FaArrowDown } from 'react-icons/fa'
 import { Footer, Me, Projects, Skills, Header } from '../components'
-import { Tooltip } from '../components/Tooltip'
 
 
 const Home: NextPage = () => {

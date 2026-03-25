@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { createContext, ReactNode, useMemo } from 'react'
+import { createContext, ReactNode } from 'react'
 import { localesData } from '../locale'
 import { Translations, LocalesType } from '../types/translations'
 

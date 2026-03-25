@@ -5,14 +5,13 @@ interface NextLink extends LinkProps {
     children: ReactNode
     className?: string
     external?: boolean
+    'aria-label'?: string
 }
 
 export function NextLink({href, children, className, external = true, ...props}: NextLink){
 	return (
-		<Link href={href} target={external ? '_self' : '_blank'} {...props}>
-			<a target='_blank' className={className}>
-				{children}
-			</a>
+		<Link href={href} target={external ? '_self' : '_blank'} className={className} {...props}>
+			{children}
 		</Link>
 	)
 }
