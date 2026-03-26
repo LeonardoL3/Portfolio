@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { FiMoon, FiSun } from 'react-icons/fi'
 
@@ -8,7 +9,14 @@ interface IconsThemeMode {
 }
 
 export const useIconsThemeMode = (): IconsThemeMode => {
+	const [mounted, setMounted] = useState(false)
 	const { resolvedTheme = '' } = useTheme()
+
+	useEffect(() => setMounted(true), [])
+
+	if (!mounted) {
+		return { currentIconMode: '', IconElement: FiSun, currentTheme: '' }
+	}
 
 	const currentIconMode = resolvedTheme === 'light' ? '#000' : '#FFF'
 	const IconElement = resolvedTheme === 'dark' ? FiMoon : FiSun
