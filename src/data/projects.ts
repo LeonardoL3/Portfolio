@@ -23,7 +23,7 @@ export const githubProjects: IGithubProjects[] = [
 			es: 'Aplicación de Node para usuarios',
 			en: 'Node Application for users'
 		},
-		description: { 
+		description: {
 			en: 'Node application for registration and login of users. Made following TDD and DDD development methods.',
 			pt: 'Aplicação Node para cadastrar e conectar usúarios. Feita seguindo método de desenvolvimento TDD e DDD.',
 			es: 'Aplicación de nodo para registrar y conectar usuarios. Hecho siguiendo el método de desarrollo TDD y DDD',
@@ -65,17 +65,18 @@ export const githubProjects: IGithubProjects[] = [
 	},
 	{
 		title: {
-			pt: 'React Blog',
-			en: 'React Blog',
-			es: 'React Blog'
+			pt: 'Xadrez',
+			en: 'Chess',
+			es: 'Ajedrez'
 		},
 		description: {
-			pt: 'Uma aplicação react using webhooks.',
-			en: 'A react blog application using webhooks.',
-			es: 'Una aplicación de blog de reacción que utiliza webhooks.'
+			en: 'A chess game built with Next.js and React. Includes move validation, piece logic, and a full test suite with Jest.',
+			pt: 'Um jogo de xadrez desenvolvido com Next.js e React. Inclui validação de movimentos, lógica de peças e uma suíte de testes com Jest.',
+			es: 'Un juego de ajedrez desarrollado con Next.js y React. Incluye validación de movimientos, lógica de piezas y una suite de pruebas con Jest.',
 		},
-		repositoryUrl: 'https://github.com/LeonardoL3/React-Blog',
-		tags: ['React', 'Stripe', 'Typescript'],
-		cover: '/assets/react-blog.jpeg'
-	}
+		repositoryUrl: 'https://github.com/LeonardoL3/chess',
+		tags: ['Next', 'React', 'Typescript', 'Jest'],
+		cover: '/assets/chess.png',
+		inProgress: true,
+	},
 ]
