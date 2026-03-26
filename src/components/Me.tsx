@@ -16,7 +16,7 @@ export function Me({t}: MeProps){
 				</h1>
 				<p className="text-center lg:text-start text-light-700 dark:text-dark-300 py-4 dt"> {t.description} </p>
 			</div>
-			<div className="text-[0] border-black dark:border-white  border-2 rounded-full m-2 max-w-[168px] sm:max-w-[262px] lg:max-w-full">
+			<div className="text-[0] border-black dark:border-white border-2 rounded-full m-2 max-w-[168px] sm:max-w-[262px] lg:w-[360px] shrink-0">
 				<Image
 					src='/assets/me.jpeg'
 					width={360}
