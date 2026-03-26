@@ -18,9 +18,9 @@ module.exports = {
 				},
 				'dark': {
 					'100': '#fff',
-					'200': '#8890b0',
-					'300': '#ccd7f7',
-					'900': '#0a192f'
+					'200': '#a1a1aa',
+					'300': '#d4d4d8',
+					'900': '#18181b'
 				},
 			},
 			gridTemplateColumns: {
