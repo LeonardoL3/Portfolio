@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 	const { currentTheme } = useIconsThemeMode()
 	const bk = useBreakpoint()
 
-	const iconsSize = bk === 'sm' ? 20 : 80
+	const iconsSize = bk === 'sm' ? 40 : 80
 
 	if (!iconsSize || !currentTheme) return null
 
