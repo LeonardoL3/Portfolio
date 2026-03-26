@@ -1,13 +1,28 @@
-# Leonardo Lazzaretti 
+# Leonardo Lazzaretti — Portfolio
 
-Source of my personal website.
+Source code for my personal portfolio site.
 
-Running locally:
+**Live:** https://leonardolazzaretti.dev
+
+## Stack
+
+- **Framework:** Next.js 15 + TypeScript
+- **Styling:** Tailwind CSS
+- **Theme:** next-themes (dark/light)
+- **i18n:** Built-in Next.js i18n routing (en, pt, es)
+
+## Getting Started
 
 ```bash
-git clone https://github.com/LeonardoL3/Portfolio.git
-cd portfolio && yarn && yarn dev
+pnpm install
+pnpm dev
 ```
-Running on port 3000.
 
-Made with Next.js, tailwindcss typescript. 
+Runs on [http://localhost:3000](http://localhost:3000).
+
+## Build
+
+```bash
+pnpm build
+pnpm start
+```
