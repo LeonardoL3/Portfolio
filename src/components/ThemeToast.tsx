@@ -5,7 +5,7 @@ import { Button } from './Button'
 
 export function ThemeToast(){
 
-	const { currentIconMode, IconElement, currentTheme } = useIconsThemeMode() 
+	const { currentIconMode, IconElement, currentTheme } = useIconsThemeMode()
 	const { setTheme } = useTheme()
 
 	const switchThemes = () => {
@@ -16,14 +16,13 @@ export function ThemeToast(){
 
 	return (
 		<div>
-			<Button 
+			<Button
 				aria-label="theme toast"
 				onClick={switchThemes}>
-				<IconElement 
-					className="pointer-events-none" 
-					size={28} 
-					color={currentIconMode} 
-					fill={'true'}
+				<IconElement
+					className="pointer-events-none"
+					size={28}
+					color={currentIconMode}
 				/>
 			</Button>
 		</div>

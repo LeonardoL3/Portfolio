@@ -13,6 +13,7 @@ interface IGithubProjects {
   repositoryUrl: string,
   cover: string
   deploy?: string
+  inProgress?: boolean
 }
 
 export const githubProjects: IGithubProjects[] = [
