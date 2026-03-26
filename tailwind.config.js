@@ -9,12 +9,11 @@ module.exports = {
 	theme: {
 		extend: { 
 			colors: {
-
 				'light': {
 					'100': '#f9f9f9',
 					'300': '#1d2854',
 					'700': '#333',
-					'900': '#000'
+					'900': '#000',
 				},
 				'dark': {
 					'100': '#fff',
@@ -27,17 +26,17 @@ module.exports = {
 				'projects': 'repeat(auto-fit, minmax(291px, 1fr))',
 			},
 			gridTemplateRows: {
-				document: '3fr fit-content(100%) 1fr',
+				document: '2fr 1fr',
 			},
 			animation: {
 				typewriter: 'typewriter 6s steps(20) 1s forwards',
 				typewriter_and_blink: 'typewriter 6s steps(20) 1s forwards, blink 700ms steps(2, start) infinite',
-				arrow_jumping: 'arrow 340ms ease-in-out infinite alternate'
+				arrow_jumping: 'arrow 500ms ease-in-out infinite alternate'
 			},
 			keyframes: {
 				arrow: {
 					to: {transform: 'translateY(0)'},
-					from: { transform: 'translateY(-8px)'}
+					from: { transform: 'translateY(-4px)'}
 				},
 				typewriter: {
 					'0%, 10%': { left: '0' },

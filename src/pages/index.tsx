@@ -1,37 +1,34 @@
 import type { NextPage } from 'next'
 
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { TranslationContext } from '../contexts/TranslationContext'
 import { Link } from 'react-scroll'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import { useIconsThemeMode } from '../hooks/useIconThemeMode'
 import { FaArrowDown } from 'react-icons/fa'
 import { Footer, Me, Projects, Skills, Header } from '../components'
+import useIsVisible from '../hooks/useIsVisible'
 
 
 const Home: NextPage = () => {
-
 	const { t, language } = useContext(TranslationContext)
 	const { currentTheme } = useIconsThemeMode()
 	const bk = useBreakpoint()
 
+	const mainSecionRef = useRef<HTMLDivElement>(null)
+	const isVisible = useIsVisible(mainSecionRef)
+
 	const iconsSize = bk === 'sm' ? 40 : 80
 
-	if (!iconsSize || !currentTheme) return null
+	if (!iconsSize || !currentTheme) return null  
 
 	return (
 		<>
 			<Header />
-			<main className="h-[calc(100vh-66px)] sm:h-screen">
-				<div className="h-full grid grid-rows-document auto-cols-fr items-center">
+			<main id="home" className="h-screen" ref={mainSecionRef}>
+				<div className="h-full grid grid-rows-document auto-cols-fr">
 					<Me t={t} />
 					<Skills iconsSize={iconsSize} currentTheme={currentTheme} />
-					<Link to='projects' href='#' smooth={true} className="block mb-4 cursor-pointer" aria-hidden>
-						<FaArrowDown 
-							size={18} 
-							className="mx-auto animate-arrow_jumping dark:text-dark-100 text-light-700 cursor-pointer" 
-						/>
-					</Link>
 				</div>
 			</main>
  
@@ -43,6 +40,16 @@ const Home: NextPage = () => {
 			</section>
 
 			<Footer />
+
+			<div className="fixed right-0 bottom-0 m-4 p-4">
+				<Link to={isVisible ? 'projects' : 'header'} href='#' smooth={true} className="cursor-pointer" aria-hidden>
+					<FaArrowDown 
+						size={18} 
+						style={isVisible ? {} : { rotate: '180deg' }}
+						className="mx-auto animate-arrow_jumping dark:text-dark-100 text-light-700 cursor-pointer transition-all duration-300" 
+					/>
+				</Link>
+			</div>
 		</>
 	)
 }

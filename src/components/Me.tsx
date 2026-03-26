@@ -18,7 +18,7 @@ export function Me({t}: MeProps){
 			</div>
 			<div className="text-[0] border-black dark:border-white border-2 rounded-full m-2 max-w-[168px] sm:max-w-[262px] lg:w-[360px] shrink-0">
 				<Image
-					src='/assets/me.jpeg'
+					src='/assets/me.png'
 					width={360}
 					alt='Leonardo lazzaretti'
 					height={360}
