@@ -17,6 +17,11 @@ export function Skills({iconsSize, currentTheme}: IconsGridProps){
 			spacing: 20
 		},
 		loop: true,
+		breakpoints: {
+			'(max-width: 640px)': {
+				slides: { perView: 3, spacing: 40 }
+			}
+		}
 	})
 
 	return (
