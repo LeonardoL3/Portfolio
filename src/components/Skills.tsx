@@ -26,7 +26,7 @@ const Skills: NextPage = () => {
 				))}
 			</div>
 
-			<div className="p-8">
+			<div className="pt-16">
 				<a
 					href="/files/Leonardo_Lazzaretti_Resume.docx"
 					download="Leonardo_Lazzaretti_Resume.docx"
