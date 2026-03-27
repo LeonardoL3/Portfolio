@@ -5,7 +5,7 @@ import { TranslationContext } from '../contexts/TranslationContext'
 import { socials } from '../data/socials'
 
 const brandColors: Record<string, string> = {
-	Github: 'bg-zinc-900 text-white',
+	Github: 'bg-zinc-700 text-white',
 	Linkedin: 'bg-[#0A66C2] text-white',
 	Whatsapp: 'bg-[#25D366] text-white',
 	Gmail: 'bg-[#EA4335] text-white',

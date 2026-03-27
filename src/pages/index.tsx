@@ -3,32 +3,21 @@ import type { NextPage } from 'next'
 import React, { useContext, useRef } from 'react'
 import { TranslationContext } from '../contexts/TranslationContext'
 import { Link } from 'react-scroll'
-import { useBreakpoint } from '../hooks/useBreakpoint'
-import { useIconsThemeMode } from '../hooks/useIconThemeMode'
 import { FaArrowDown } from 'react-icons/fa'
-import { Me, Projects, Skills } from '../components'
+import { Me, Projects } from '../components'
 import useIsVisible from '../hooks/useIsVisible'
 
 
 const Home: NextPage = () => {
 	const { t, language } = useContext(TranslationContext)
-	const { currentTheme } = useIconsThemeMode()
-	const bk = useBreakpoint()
 
 	const mainSecionRef = useRef<HTMLDivElement>(null)
 	const isVisible = useIsVisible(mainSecionRef)
 
-	const iconsSize = bk === 'sm' ? 40 : 80
-
-	if (!iconsSize || !currentTheme) return null  
-
 	return (
 		<>
-			<main id="home" className="h-screen" ref={mainSecionRef}>
-				<div className="h-full grid grid-rows-document auto-cols-fr">
-					<Me t={t} />
-					<Skills iconsSize={iconsSize} currentTheme={currentTheme} />
-				</div>
+			<main id="home" className="h-screen flex items-center" ref={mainSecionRef}>
+				<Me t={t} />
 			</main>
  
 			<section id="projects" className="min-h-screen">
