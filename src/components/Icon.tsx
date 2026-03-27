@@ -20,7 +20,7 @@ const skillIcons = {
 }
 
 const socialIcons = {
-	Github: SiGithub,
+	GitHub: SiGithub,
 	Linkedin: SiLinkedin,
 	Whatsapp: SiWhatsapp,
 	Gmail: FaEnvelope

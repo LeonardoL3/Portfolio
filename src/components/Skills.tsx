@@ -1,38 +1,42 @@
-import 'keen-slider/keen-slider.min.css'
-import { useKeenSlider } from 'keen-slider/react'
+import type { NextPage } from 'next'
+import { useContext } from 'react'
+import { Icon } from '../components/Icon'
+import { TranslationContext } from '../contexts/TranslationContext'
+import { useIconsThemeMode } from '../hooks/useIconThemeMode'
 import { skills } from '../data/skills'
-import { Icon } from './Icon'
 
-interface IconsGridProps {
-    iconsSize: number
-    currentTheme: string
-}
- 
-export function Skills({iconsSize, currentTheme}: IconsGridProps){
+const Skills: NextPage = () => {
+	const { t } = useContext(TranslationContext)
+	const { currentTheme } = useIconsThemeMode()
 
-	const [sliderRef] = useKeenSlider({
-		slides: {
-			perView: 5,
-			spacing: 20
-		},
-		loop: true,
-	})
+	if (!currentTheme) return null
 
 	return (
-		<div className="max-w-[60%] mx-auto">
-			<div ref={sliderRef} className="cursor-grab keen-slider">
-				{skills.map(skill => {
-					return (
-						<div key={skill} className="flex flex-col items-center gap-2 keen-slider__slide justify-center">
-							<Icon variant={skill} size={iconsSize} color={currentTheme === 'dark' ? 'white' : 'black'} className="dt" />
-							<label> {skill} </label>
-						</div>
-					)
-				})}
+		<main className="flex flex-col items-center px-6">
+			<div className="grid grid-cols-skills auto-rows-fr gap-12 max-w-[800px] w-full">
+				{skills.map(skill => (
+					<div key={skill} className="flex flex-col items-center gap-2">
+						<Icon
+							variant={skill}
+							size={48}
+							color={currentTheme === 'dark' ? 'white' : 'black'}
+						/>
+						<span className="text-xs text-light-700 dark:text-dark-300">{skill}</span>
+					</div>
+				))}
 			</div>
-		</div>
+
+			<div className="p-8">
+				<a
+					href="/files/Leonardo_Lazzaretti_Resume.docx"
+					download="Leonardo_Lazzaretti_Resume.docx"
+					className="inline-block px-6 py-2.5 rounded-md border border-light-900 dark:border-dark-100 text-sm font-medium text-light-900 dark:text-dark-100 hover:bg-light-900 hover:text-light-100 dark:hover:bg-dark-100 dark:hover:text-dark-900 transition-colors"
+				>
+					{t.download_resume}
+				</a>
+			</div>
+		</main>
 	)
 }
 
-
-
+export default Skills

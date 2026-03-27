@@ -30,7 +30,7 @@ export const githubProjects: IGithubProjects[] = [
 		},
 		tags: ['Node', 'Clean Architecture', 'Typescript'],
 		repositoryUrl: 'https://github.com/LeonardoL3/node-clean-api',
-		cover: '/assets/node_express.png',
+		cover: '/assets/user-auth-system.png',
 	},
 	{
 		title: {
@@ -39,9 +39,9 @@ export const githubProjects: IGithubProjects[] = [
 			es: 'cartera personal'
 		},
 		description: {
-			en: 'Code of my personal portfolio. Made with ❤️ and Next.js.',
-			pt: 'Código do meu portifolio pessoal. Feito com ❤️ e Next.js.',
-			es: 'Código de mi portafolio personal. Hecho con ❤️ y Next.js.',
+			en: 'Code of my personal portfolio.',
+			pt: 'Código do meu portifolio pessoal.',
+			es: 'Código de mi portafolio personal.',
 		},
 		repositoryUrl: 'https://github.com/LeonardoL3/Portfolio',
 		tags: ['Next', 'Typescript', 'tailwind'],
@@ -61,7 +61,7 @@ export const githubProjects: IGithubProjects[] = [
 		deploy: 'https://leonardol3.github.io/Design-System',
 		repositoryUrl: 'https://github.com/LeonardoL3/Design-System',
 		tags: ['Storybook', 'Turbopack', 'React', 'Github Actions'],
-		cover: '/assets/design_system.png'
+		cover: '/assets/design-system.png'
 	},
 	{
 		title: {

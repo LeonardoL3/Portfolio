@@ -6,17 +6,19 @@ import { Link } from 'react-scroll'
 import { FaArrowDown } from 'react-icons/fa'
 import { Me, Projects } from '../components'
 import useIsVisible from '../hooks/useIsVisible'
+import Skills from '../components/Skills'
+import ContactMe from '../components/ContactMe'
 
 
 const Home: NextPage = () => {
 	const { t, language } = useContext(TranslationContext)
 
-	const mainSecionRef = useRef<HTMLDivElement>(null)
-	const isVisible = useIsVisible(mainSecionRef)
+	const mainSectionRef = useRef<HTMLDivElement>(null)
+	const isVisible = useIsVisible(mainSectionRef)
 
 	return (
 		<>
-			<main id="home" className="h-screen flex items-center" ref={mainSecionRef}>
+			<main id="home" className="h-screen flex items-center" ref={mainSectionRef}>
 				<Me t={t} />
 			</main>
  
@@ -24,6 +26,20 @@ const Home: NextPage = () => {
 				<div className="max-w-[1280px] mx-auto px-6">
 					<h2 className="text-xl md:text-3xl py-12 text-light-900 dark:text-dark-300 dt"> {t.projects_description} </h2>
 					<Projects language={language} />
+				</div>
+			</section>
+
+			<section id="skills">
+				<div className="mx-auto px-6">
+					<h2 className="text-xl md:text-3xl py-12 text-light-900 dark:text-dark-300 dt"> {t.skills_description} </h2>
+					<Skills />
+				</div>
+			</section>
+
+			<section id="contact-me">
+				<div className="mx-auto px-6">
+					<h2 className="text-xl md:text-3xl py-12 text-light-900 dark:text-dark-300 dt"> {t.contact_me_description} </h2>
+					<ContactMe />
 				</div>
 			</section>
 

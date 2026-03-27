@@ -7,7 +7,7 @@ interface MeProps {
 
 export function Me({t}: MeProps){
 	return (
-		<div className="flex items-center justify-around flex-col-reverse lg:flex-row mx-12">
+		<div className="flex items-center justify-around flex-col-reverse lg:flex-row mx-12 mb-[66px]">
 			<div>
 				<span className="text-center lg:text-start text-xl md:text-2xl block py-4 text-light-900 dark:text-dark-200 dt"> {t.salutation} </span>
 				<h1

@@ -3,10 +3,10 @@ import { localesData } from '../locale'
 export interface Translations {
   description: string;
   projects_description: string;
+  skills_description: string;
+  contact_me_description: string;
+  download_resume: string;
   salutation: string;
-  nav_home: string;
-  nav_skills: string;
-  nav_contact: string;
 }
 
 export type LocalesType = keyof typeof localesData

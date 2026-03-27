@@ -1,14 +1,20 @@
-import React from 'react'
-import Link from 'next/link'
+import { useContext } from 'react'
+import { TranslationContext } from '../contexts/TranslationContext'
 
 export const Languages = () => {
+	const { language, setLanguage } = useContext(TranslationContext)
 
 	return (
-		<div className=" text-black dark:text-white [&>*]:mr-2 text-sm">
-			<Link href='/' locale="pt"> [ pt ] </Link>
-			<Link href={'/'} locale="en"> [ en ] </Link>
-			<Link href={'/'} locale="es"> [ es ] </Link>
+		<div className="text-black dark:text-white text-sm flex gap-2">
+			{(['pt', 'en', 'es'] as const).map(lang => (
+				<button
+					key={lang}
+					onClick={() => setLanguage(lang)}
+					className={`transition-opacity ${language === lang ? 'opacity-100 font-bold' : 'opacity-50 hover:opacity-75'}`}
+				>
+					[ {lang} ]
+				</button>
+			))}
 		</div>
 	)
 }
-

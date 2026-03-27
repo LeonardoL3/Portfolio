@@ -24,6 +24,8 @@ module.exports = {
 			},
 			gridTemplateColumns: {
 				'projects': 'repeat(auto-fit, minmax(291px, 1fr))',
+				'skills': 'repeat(auto-fit, minmax(48px, 1fr))',
+				'contact-me': 'repeat(auto-fit, minmax(186px, 1fr))'
 			},
 			gridTemplateRows: {
 				document: '2fr 1fr',
