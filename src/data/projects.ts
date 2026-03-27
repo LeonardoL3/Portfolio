@@ -30,7 +30,7 @@ export const githubProjects: IGithubProjects[] = [
 		},
 		tags: ['Node', 'Clean Architecture', 'Typescript'],
 		repositoryUrl: 'https://github.com/LeonardoL3/node-clean-api',
-		cover: '/assets/user-auth-system.png',
+		cover: '/assets/user-auth-system.jpg',
 	},
 	{
 		title: {
