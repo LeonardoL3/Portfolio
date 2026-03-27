@@ -23,7 +23,7 @@ export function Skills({iconsSize, currentTheme}: IconsGridProps){
 			<div ref={sliderRef} className="cursor-grab keen-slider">
 				{skills.map(skill => {
 					return (
-						<div key={skill} className="flex flex-col align-center gap-2 keen-slider__slide flex justify-center">
+						<div key={skill} className="flex flex-col items-center gap-2 keen-slider__slide justify-center">
 							<Icon variant={skill} size={iconsSize} color={currentTheme === 'dark' ? 'white' : 'black'} className="dt" />
 							<label> {skill} </label>
 						</div>

@@ -11,7 +11,7 @@ export function Projects({language}: ProjectsProps){
 		<div className="grid grid-cols-projects auto-rows-fr gap-6">
 			{githubProjects.map((project) => {
 				return (
-					<NextLink href={project.repositoryUrl} key={project.cover} className="hover:scale-105 group min-h-[452px] flex flex-col bg-transparent border-[1px] border-solid dark:border-dark-200 border-light-900 rounded-lg overflow-hidden">
+					<NextLink href={project.repositoryUrl} key={project.cover} className="transition-transform duration-300 ease-out hover:scale-[1.02] group min-h-[452px] flex flex-col bg-transparent border-[1px] border-solid dark:border-dark-200 border-light-900 rounded-lg overflow-hidden">
 						<>
 							<header className='relative h-60 w-full transition-all delay-75'>
 								<Image fill alt={project.title[language]} src={project.cover} className='object-cover' />

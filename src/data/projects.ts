@@ -19,9 +19,9 @@ interface IGithubProjects {
 export const githubProjects: IGithubProjects[] = [
 	{
 		title: {
-			pt: 'Aplicação Node de usúarios',
-			es: 'Aplicación de Node para usuarios',
-			en: 'Node Application for users'
+			pt: 'Criação e autenticação de usuários',
+			es: 'Creación y autenticación de usuarios',
+			en: 'User creation and authentication'
 		},
 		description: {
 			en: 'Node application for registration and login of users. Made following TDD and DDD development methods.',
