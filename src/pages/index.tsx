@@ -6,7 +6,7 @@ import { Link } from 'react-scroll'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import { useIconsThemeMode } from '../hooks/useIconThemeMode'
 import { FaArrowDown } from 'react-icons/fa'
-import { Footer, Me, Projects, Skills, Header } from '../components'
+import { Me, Projects, Skills } from '../components'
 import useIsVisible from '../hooks/useIsVisible'
 
 
@@ -24,7 +24,6 @@ const Home: NextPage = () => {
 
 	return (
 		<>
-			<Header />
 			<main id="home" className="h-screen" ref={mainSecionRef}>
 				<div className="h-full grid grid-rows-document auto-cols-fr">
 					<Me t={t} />
@@ -38,8 +37,6 @@ const Home: NextPage = () => {
 					<Projects language={language} />
 				</div>
 			</section>
-
-			<Footer />
 
 			<div className="fixed right-0 bottom-0 m-4 p-4">
 				<Link to={isVisible ? 'projects' : 'header'} href='#' smooth={true} className="cursor-pointer" aria-hidden>

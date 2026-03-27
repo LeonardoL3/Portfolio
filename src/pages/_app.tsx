@@ -4,11 +4,11 @@ import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import { TranslationProvider } from '../contexts/TranslationContext'
 import Head from 'next/head'
+import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
-
-
-	return ( 
+	return (
 		<div>
 			<Head>
 				<title> Leonardo.zz </title>
@@ -16,8 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 			</Head>
 			<ThemeProvider attribute="class" enableSystem>
 				<TranslationProvider>
+					<Header />
 					<Component {...pageProps} />
-
+					<Footer />
 				</TranslationProvider>
 			</ThemeProvider>
 		</div>

@@ -1,4 +1,4 @@
-import { SiReact, SiJavascript, SiTypescript, SiNodedotjs, SiPrisma, SiJest, SiDocker, SiStorybook, SiGraphql, SiNextdotjs, SiGithub, SiLinkedin, SiWhatsapp } from 'react-icons/si'
+import { SiReact, SiJavascript, SiTypescript, SiNodedotjs, SiPrisma, SiJest, SiDocker, SiStorybook, SiGraphql, SiNextdotjs, SiGithub, SiLinkedin, SiWhatsapp, SiPython, SiDjango } from 'react-icons/si'
 import { FiMoon, FiSun } from 'react-icons/fi'
 import { FaEnvelope } from 'react-icons/fa'
 
@@ -15,6 +15,8 @@ const skillIcons = {
 	Storybook: SiStorybook,
 	Graphql: SiGraphql,
 	Next: SiNextdotjs,
+	Python: SiPython,
+	Django: SiDjango,
 }
 
 const socialIcons = {
