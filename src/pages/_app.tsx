@@ -9,7 +9,7 @@ import { Footer } from '../components/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<div>
+		<div className="max-w-[1920px] mx-auto">
 			<Head>
 				<title> Leonardo.zz </title>
 				<link rel="shortcut icon" href="/favicon.png" />

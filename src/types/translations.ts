@@ -8,6 +8,8 @@ export interface Translations {
   download_resume: string;
   view_live_prefix: string;
   view_live_link: string;
+  not_found_message: string;
+  back_to_home: string;
   salutation: string;
 }
 

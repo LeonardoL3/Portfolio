@@ -9,4 +9,6 @@ export const ptBR: Translations = {
 	download_resume: 'Baixar Meu Currículo',
 	view_live_prefix: 'Você pode ver ao vivo',
 	view_live_link: 'aqui',
+	not_found_message: 'Página não encontrada',
+	back_to_home: 'Voltar ao início',
 }

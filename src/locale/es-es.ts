@@ -9,4 +9,6 @@ export const esES: Translations = {
 	download_resume: 'Descargar Mi Currículum',
 	view_live_prefix: 'Puedes verlo en vivo',
 	view_live_link: 'aquí',
+	not_found_message: 'Página no encontrada',
+	back_to_home: 'Volver al inicio',
 }

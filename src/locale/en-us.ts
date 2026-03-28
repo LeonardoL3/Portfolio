@@ -9,4 +9,6 @@ export const enUS: Translations = {
 	download_resume: 'Download My Resume',
 	view_live_prefix: 'You can view it live',
 	view_live_link: 'here',
+	not_found_message: 'Page not found',
+	back_to_home: 'Back to home',
 }

@@ -22,8 +22,8 @@ const Home: NextPage = () => {
 				<Me t={t} />
 			</main>
  
-			<section id="projects" className="min-h-screen">
-				<div className="max-w-[1280px] mx-auto px-6">
+			<section id="projects">
+				<div className="px-6">
 					<h2 className="text-xl md:text-3xl py-12 text-light-900 dark:text-dark-300 dt"> {t.projects_description} </h2>
 					<Projects language={language} />
 				</div>
