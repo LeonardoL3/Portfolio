@@ -13,15 +13,15 @@ const Skills: NextPage = () => {
 
 	return (
 		<main className="flex flex-col items-center px-6">
-			<div className="grid grid-cols-skills auto-rows-fr gap-12 max-w-[800px] w-full">
+			<div className="grid grid-cols-skills auto-rows-fr gap-20 max-w-[800px] w-full">
 				{skills.map(skill => (
 					<div key={skill} className="flex flex-col items-center gap-2">
 						<Icon
 							variant={skill}
-							size={48}
+							size={80}
 							color={currentTheme === 'dark' ? 'white' : 'black'}
 						/>
-						<span className="text-xs text-light-700 dark:text-dark-300">{skill}</span>
+						<span className="text-lg text-light-700 dark:text-dark-300">{skill}</span>
 					</div>
 				))}
 			</div>
